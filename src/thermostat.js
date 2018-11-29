@@ -7,7 +7,7 @@ function Thermostat() {
   this.mediumUsage = 25
   this.powerSavingOnMax = 25
   this.powerSavingOffMax = 32
-}
+};
 
 Thermostat.prototype.up = function() {
   this._powerSavingOnExceedsMaxTemp();
@@ -26,7 +26,6 @@ Thermostat.prototype.down = function() {
 Thermostat.prototype.powerSaving = function() {
   this.powerSavingStatus === true ? this.powerSavingStatus = false : this.powerSavingStatus = true
 };
-
 
 Thermostat.prototype.reset = function() {
   this.temperature = this.defaultTemperature

@@ -1,7 +1,7 @@
 # thermostat
 
 ## User Stories:
-
+```
 As a manufacturer
 So I can write instructions to help the User
 I want the thermostat to start at 20 degrees
@@ -33,3 +33,4 @@ I would like a temperature reset button function
 As a person
 So I know how much energy I am using
 I would like to be told whether I am low usage, medium usage and high usage
+```
