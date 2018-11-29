@@ -42,7 +42,7 @@ Thermostat.prototype.energyUsage = function() {
     return 'Medium-usage';
   } else {
     return 'High-usage';
-  } 
+  }
 };
 
 Thermostat.prototype._powerSavingOnExceedsMaxTemp = function() {
