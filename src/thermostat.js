@@ -17,7 +17,7 @@ Thermostat.prototype.up = function() {
 };
 
 Thermostat.prototype.down = function() {
-  if ((this.temperature - 1) <= this.minTemperature) {
+  if ((this.temperature - 1) < this.minTemperature) {
     throw new Error('Exceeds minimum temperature');
   } else {
     this.temperature -= 1
