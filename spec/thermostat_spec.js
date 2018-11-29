@@ -30,7 +30,6 @@ describe('Thermostat', function() {
       expect(function() {
         specHelper.down(thermostat, 10);
       }).toThrowError('Exceeds minimum temperature')
-
     });
   });
 
