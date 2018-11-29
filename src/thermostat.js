@@ -35,9 +35,15 @@ Thermostat.prototype.reset = function() {
   this.temperature = this.defaultTemperature
 };
 
-Thermostat.prototype.energyUsage = function() { if (this.temperature <
-this.lowUsage) { return 'Low-usage'; } else if (this.temperature <
-this.mediumUsage) { return 'Medium-usage'; } else { return 'High-usage'; } };
+Thermostat.prototype.energyUsage = function() {
+  if (this.temperature < this.lowUsage) {
+    return 'Low-usage';
+  } else if (this.temperature < this.mediumUsage) {
+    return 'Medium-usage';
+  } else {
+    return 'High-usage';
+  } 
+};
 
 Thermostat.prototype._powerSavingOnExceedsMaxTemp = function() {
   if (this.powerSavingStatus === true && (this.temperature + 1) > this.powerSavingOnMax) {

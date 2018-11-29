@@ -7,29 +7,27 @@
     <script src="./src/jquery.js"></script>
     <script src="./src/interfaceThermostat.js"></script>
     <script src="./src/thermostat.js"></script>
+    <style>
+
+    </style>
+
   </head>
 
   <body>
 
 <h1>Thermostat</h1>
+<h3 class="PowerSaving" id="powerSavingLabelOff">Power Saving Off</h3>
+<h3 class="PowerSaving" id="powerSavingLabelNo">Power Saving On</h3>
 <h2 id="temperature"></h2>
+<button id="down" type="button">Decrease</button>
+<button id="up" type="button">Increase</button>
 <br>
-<h2 id="message"></h2>
 
-    <button id="up" type="button">Up</button>
-    <button id="down" type="button">Down</button>
-    <br>
-    <button id="reset" type="button" >Reset</button>
-    <h2 class="PowerSaving" id="powerSavingLabelOff">Power Saving Off</h2>
-    <h2 class="PowerSaving" id="powerSavingLabelNo">Power Saving On</h2>
-
-    <br>
-    <button id="powerSaving" type="button">Toggle Power Saving</button>
-    <br>
-
-    <h3 id="energyUsageText"></h3>
-    <button id="energyUsage" type="button">Check Energy Usage</button>
-
+<br>
+<button id="powerSaving" type="button">Toggle Power Saving</button>
+<br>
+<button id="reset" type="button" >Reset Temperature</button>
+<br>
 
   </body>
 </html>

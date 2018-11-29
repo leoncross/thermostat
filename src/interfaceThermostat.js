@@ -23,10 +23,17 @@ $ ( document ).ready(function() {
     thermostat.powerSaving();
     $(".PowerSaving").toggle();
     temperatureUpdate();
-
   });
 
   function temperatureUpdate() {
     $('#temperature').text(thermostat.temperature);
-  }
+      if (thermostat.energyUsage() === 'Low-usage') {
+        $('#temperature').css('color', 'green');
+      } else if (thermostat.energyUsage() === 'Medium-usage') {
+        $('#temperature').css('color', 'blue');
+      } else {
+        $('#temperature').css('color', 'red');
+      }
+    };
+
 });
