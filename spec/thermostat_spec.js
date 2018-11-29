@@ -28,7 +28,7 @@ describe('Thermostat', function() {
 
     it('doesnt go below the minimum temperature', function() {
       expect(function() {
-        specHelper.down(thermostat, 10);
+        specHelper.down(thermostat, 11);
       }).toThrowError('Exceeds minimum temperature')
     });
   });
@@ -62,6 +62,15 @@ describe('Thermostat', function() {
       specHelper.up(thermostat, 13)
       }).toThrowError('Power saving off: Exceeds maximum temperature')
     });
+
+    it('reduces the temperature back to 25 if power saver mode is turned on', function(){
+      thermostat.powerSaving()
+      specHelper.up(thermostat, 10)
+      thermostat.powerSaving()
+      expect(thermostat.temperature).toEqual(25)
+    });
+
+
   });
 
   describe('resets the temperature', function() {

@@ -2,7 +2,7 @@ $ ( document ).ready(function() {
 
   var thermostat = new Thermostat
   temperatureUpdate();
-  $("#powerSavingLabelNo").hide();
+  $("#powerSavingLabelOff").hide();
 
   $('#up').on('click', function() {
     thermostat.up();
@@ -14,7 +14,6 @@ $ ( document ).ready(function() {
     temperatureUpdate();
   })
 
-
   $('#reset').on('click', function() {
     thermostat.reset();
     temperatureUpdate();
@@ -22,11 +21,12 @@ $ ( document ).ready(function() {
 
   $("#powerSaving").click(function(){
     thermostat.powerSaving();
-     $(".PowerSaving").toggle();
+    $(".PowerSaving").toggle();
+    temperatureUpdate();
+
   });
 
   function temperatureUpdate() {
     $('#temperature').text(thermostat.temperature);
   }
-
 });
